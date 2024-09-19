@@ -4,8 +4,7 @@ import streamlit as st
 from crewai import Agent,Task,Crew,Process
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
-from crewai_tools import SerperDevTool,WebsiteSearchTool
-
+from crewai_tools import SerperDevTool
 # # LLM Monitering
 os.environ['LANGCHAIN_TRACING_V2']='true'
 os.environ['LANGCHAIN_API_KEY']='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'
@@ -62,7 +61,7 @@ Content_Planner_Agent = Agent(
     curriculum design and user engagement to create a well-structured content roadmap''',
     memory=True,
     verbose=True,
-    tools=[search_tool,web_rag_tool],
+    tools=[search_tool],
     llm=LLM_Model
 )
 Subject_Matter_Expert_Agent = Agent(
