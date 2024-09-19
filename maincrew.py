@@ -44,7 +44,6 @@ llm_model = ChatGoogleGenerativeAI(model='gemini-1.5-flash',api_key=os.getenv('G
 # Initialize WebSearch Tool
 os.environ['SERPER_API_KEY']='5e91bacd42a33cdf4299197ce6d7e49aaca23310'
 search_tool = SerperDevTool()
-web_rag_tool = WebsiteSearchTool()
 
 # Agents
 
